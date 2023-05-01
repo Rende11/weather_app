@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:weather_app/presentation/home/widgets/current_location.dart';
+
 
 class WeatherToday extends StatelessWidget {
   const WeatherToday({super.key});
@@ -26,13 +27,7 @@ class WeatherToday extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(children: [
-                SvgPicture.asset('assets/images/svg/ic_geo_mark.svg',
-                    colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.6), BlendMode.srcIn)),
-                Text('Cupertino',
-                    style: Theme.of(context).textTheme.labelMedium),
-              ]),
+              const CurrentLocationWidget(),
               Text('12°', style: Theme.of(context).textTheme.displayLarge),
               Text('Sunny and bright',
                   style: Theme.of(context).textTheme.labelLarge)
