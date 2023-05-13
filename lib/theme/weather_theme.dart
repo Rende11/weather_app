@@ -42,6 +42,8 @@ class WeatherTheme {
           fontWeight: FontWeight.w600,
         ),
         titleLarge: defaultTextStyle.copyWith(
-            fontSize: 24, fontWeight: FontWeight.w700)),
+            fontSize: 24, fontWeight: FontWeight.w700)
+        
+            ),
   );
 }

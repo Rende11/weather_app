@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/presentation/home/widgets/current_location.dart';
+import 'package:weather_app/presentation/search/widgets/past_search_block.dart';
 
 import './widgets/search_text_field.dart';
 import '../../navigation/app_router.dart';
@@ -14,7 +15,7 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   final _controller = TextEditingController();
   final _focusNode = FocusNode();
-
+  final _pastSearchCities = ["London", "Moscow", "Paris"];
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,11 @@ class _SearchPageState extends State<SearchPage> {
           const Divider(
             thickness: 1,
           ),
+          PastSearchBlock(
+              pastSearchCities: _pastSearchCities,
+              onClearAllTap: () {
+                print("CLEAR ALL");
+              })
         ]),
       ),
     );

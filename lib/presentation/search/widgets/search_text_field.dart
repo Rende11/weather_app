@@ -3,10 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../../resources/images.dart';
 
 class SearchTextField extends StatelessWidget {
-  final TextEditingController controller;
-  final FocusNode focusNode;
-  final VoidCallback onTap;
-  final VoidCallback onCloseTap;
 
   const SearchTextField({
     required this.controller,
@@ -15,7 +11,11 @@ class SearchTextField extends StatelessWidget {
     required this.onCloseTap,
     super.key,
   });
-
+  
+  final TextEditingController controller;
+  final FocusNode focusNode;
+  final VoidCallback onTap;
+  final VoidCallback onCloseTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,8 @@ class SearchTextField extends StatelessWidget {
       style: const TextStyle(color: Colors.black),
       cursorColor: Colors.black,
       decoration: InputDecoration(
-        
           hintText: 'Enter city name',
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(Radius.circular(8))),
           prefixIcon: Padding(
             padding: const EdgeInsets.all(10),
