@@ -9,12 +9,10 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: MaterialApp(
-        title: Strings.appName,
-        theme: WeatherTheme.lightTheme,
-        home: const HomePage(),
-      ),
+    return MaterialApp(
+      title: Strings.appName,
+      theme: WeatherTheme.lightTheme,
+      home: const HomePage(),
     );
   }
 }
