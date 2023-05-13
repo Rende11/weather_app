@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import './widgets/weather_days_list.dart';
 import './widgets/weather_today.dart';
+import '../../resources/images.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -18,14 +19,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          leading: IconButton(
-            onPressed: null,
-            icon: SvgPicture.asset('assets/images/svg/ic_location.svg'),
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 12),
+            child: IconButton(
+              onPressed: () {
+                print("Location");
+              },
+              icon: SvgPicture.asset(Images.icLocation),
+            ),
           ),
           actions: [
-            IconButton(
-                onPressed: null,
-                icon: SvgPicture.asset('assets/images/svg/ic_search.svg')),
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: IconButton(
+                  onPressed: () {
+                    print("Search");
+                  },
+                  icon: SvgPicture.asset(Images.icSearch)),
+            ),
           ]),
       body: Column(
         children: const [
